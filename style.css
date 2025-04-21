@@ -12,6 +12,8 @@
   --transition: all 0.3s ease;
 }
 
+
+
 /* Dark mode variables */
 .dark-mode {
   --primary-color: #3b82f6;
@@ -50,6 +52,85 @@ h4 { font-size: 1.25rem; }
 
 .highlight {
   color: var(--primary-color);
+}
+
+/* تحسينات النص للوضع المظلم */
+.dark-mode {
+  color: #e2e8f0; /* لون النص الأساسي في الوضع المظلم */
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+  color: white;
+}
+
+.dark-mode .hero h2 {
+  color: #94a3b8;
+}
+
+/* تحسينات للأزرار */
+.dark-mode .btn-secondary {
+  border-color: white;
+  color: white;
+}
+
+.dark-mode .btn-secondary:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* تحسينات للبطاقات */
+.dark-mode .card-content p,
+.dark-mode .timeline-content p,
+.dark-mode .contact-item p,
+.dark-mode .certificate-item p {
+  color: #cbd5e1;
+}
+
+/* تحسينات للشهادات */
+.dark-mode .protected-certificate {
+  background-color: var(--dark-color);
+  border: 1px solid #334155;
+}
+
+.dark-mode .card {
+  border: 1px solid #334155;
+}
+
+.dark-mode img {
+  filter: brightness(0.9);
+}
+
+/* تحسينات للخط الزمني */
+.dark-mode .timeline-content {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+}
+
+/* تحسينات لأشرطة المهارات */
+.dark-mode .skill-bar {
+  background-color: #334155;
+}
+
+/* تحسينات للنموذج */
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: white;
+}
+
+/* تحسينات للروابط */
+.dark-mode .project-link {
+  color: #93c5fd;
+}
+
+.dark-mode .project-link:hover {
+  color: white;
 }
 
 /* Buttons */
@@ -187,10 +268,10 @@ h4 { font-size: 1.25rem; }
 }
 
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   border: 5px solid var(--primary-color);
   box-shadow: var(--box-shadow);
 }
@@ -622,15 +703,6 @@ h4 { font-size: 1.25rem; }
   pointer-events: none;
 }
 
-.watermark-text {
-  color: rgba(255,0,0,0.6);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px white;
-  transform: rotate(-15deg);
-  margin: 5px 0;
-  opacity: 0.7;
-}
 
 .certificate-lock {
   position: absolute;
@@ -651,17 +723,6 @@ h4 { font-size: 1.25rem; }
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-}
-
-.btn-view {
-  margin-top: auto;
-  align-self: flex-start;
-  background-color: var(--primary-color);
-  color: white;
-}
-
-.btn-view:hover {
-  background-color: var(--secondary-color);
 }
 
 /* Modal التصميم */
@@ -933,6 +994,7 @@ h4 { font-size: 1.25rem; }
   .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
     margin-left: 80px;
+    top: 45px;
     margin-right: 0;
   }
 }
